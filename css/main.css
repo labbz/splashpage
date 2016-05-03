@@ -1,0 +1,147 @@
+/*
+ * FONT
+ */
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+/*
+ * RESET
+ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 1em;
+}
+
+
+/*
+ * CONTENTS
+ */
+
+section {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+  background-image: url('../img/labbz-background.jpg');
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: white;
+}
+
+header,
+footer {
+  padding: 1rem 0;
+  flex-shrink: 0;
+}
+
+@media screen and (min-width: 600px) {
+  header, footer { padding: 2rem 0; }
+}
+
+main {
+  display: flex;
+  flex: 1;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 840px;
+}
+
+h2 {
+  margin: 0;
+  font-size: 2rem;
+  animation-name: flash;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes flash {
+  from, 50%, to { opacity: 1; }
+  25%, 75%  { opacity: 0; }
+}
+
+@media screen and (min-width: 600px) {
+  h2 { font-size: 3rem; }
+}
+
+a {
+  display: inline-block;
+  margin: 0 .5rem;
+  padding: 1rem 1.4rem .8rem;
+  min-width: 260px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1em;
+  letter-spacing: .04rem;
+  color: white;
+  text-decoration: none;
+  border-radius: 100px;
+  border-width: 2px;
+  border-style: solid;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .25);
+}
+
+a:hover {
+  transform-origin: center;
+  animation-name: swing;
+  animation-duration: .5s;
+}
+
+.btn-blue {
+  background-color: #3b5998;
+  border-color: #36528C;
+}
+
+.btn-lightblue {
+  background-color: #1897d4;
+  border-color: #1485BB;
+}
+
+@keyframes swing {
+  20% { transform: rotate3d(0, 0, 1, 6deg); }
+  40% { transform: rotate3d(0, 0, 1, -3deg); }
+  60% { transform: rotate3d(0, 0, 1, 3deg); }
+  80% { transform: rotate3d(0, 0, 1, -3deg); }
+  to { transform: rotate3d(0, 0, 1, 0deg); }
+}
+
+
+/*
+ * UTILITY
+ */
+
+.mb-l {
+  margin-bottom: 2rem;
+}
+
+.mb-m {
+  margin-bottom: 1rem;
+}
+
+.mb-s {
+  margin-bottom: .5rem;
+}

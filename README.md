@@ -1,2 +1,3 @@
-# splashpage
-Temporary splash page for the urban lab of Bolzano city
+# labBZ splash page
+
+Temporary splash page for the urban lab of Bolzano city.
